@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>LCLScanner</title>
+    <link rel="stylesheet" href="styles/win9x/layout.min.css">
+    <link rel="stylesheet" href="styles/win9x/theme.css">
+    <link rel="stylesheet" href="styles/win9x/skins/95.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="desktop grow" style="padding-top: 1px; padding-bottom: 1px;">
+
+      <main class="margin window active main-window">
+        <div class="title-bar">
+          <div class="title-bar-title" style="margin-left: 0.25em;">LCLScanner <span class="version">v0.0</span></div>
+        </div>
+
+        <div class="window-body">
+
+          <!-- <div class="section template">
+            <div class="padding">
+              <h1>Lumber SKU Page</h1>
+            </div>
+            <div class="list" role="listbox">
+              <table class="detailed">
+                <thead>
+                  <tr>
+                    <th style="width: 10%;">SKU</th>
+                    <th>Desc</th>
+                    <th style="width: 6%;">Loc</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr role="option" class="template">
+                    <td class="icon">
+                      <div class="icon-label sku">My Documents</div>
+                    </td>
+                    <td class="desc">File Folder</td>
+                    <td class="loc">A1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div> -->
+
+          <div class="section" style="margin-left: 5px;">
+            <form id="photoform" method="POST" enctype="multipart/form-data" action="/upload_image">
+              <label for="imagefile">
+                <div class="button">
+                  <span class="image-button">
+                    <img style="width: 2em;" class="icon-image" src="styles/win9x/icons/kodak-imaging-file-32x32.png">
+                    <span style="margin-top: 2px;">scan price tag</span>
+                  </span>
+                </div>
+              </label>
+              <input id="imagefile" name="imagefile" type="file" accept="image/*" style="display: none;">
+            </form>
+            
+          </div>
+
+          <img id="imagebox" src="">
+
+        </div>
+      </main>
+    </div>
+    
+
+    <!--FLOATING DIALOGS-->
+
+
+<!--     
+    <\!-- COPY SKU --\>
+    <div class="copy-dialog-wrapper" style="display: none;" onmousedown="close_copy_sku(event.target)">
+      <div class="copy-dialog dialog active" style="max-width: 400px;">
+        <div class="title-bar">
+          <div class="title-bar-text">
+            Copy SKU
+          </div>
+          <div class="title-bar-buttons">
+            <button data-close="" onclick="close_copy_sku()"></button>
+          </div>
+        </div>
+        <div class="dialog-body">
+          <input type="text" value="This input is read-only" readonly="" spellcheck="false">
+          <div class="padding">
+            Press Ctrl+C to copy,<br>ESC to close
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <\!-- REMOVE CONFIRMATION --\>
+    <div class="remove-dialog-wrapper dialog-wrapper" style="display: none;">
+      <div class="remove-dialog dialog dialog-dialog active" style="max-width: 400px;">
+        <div class="title-bar">
+          <div class="title-bar-text">
+            Remove
+          </div>
+        </div>
+        <div class="dialog-body alcenter">
+          <div class="padding">Are you sure you want to remove <span class="type">Section</span>:<br>"<span class="name">[Name]</span>" ?</div>
+          <div class="flex-row gap padding justify-center">
+            <button onclick="remove_el()">Yes</button>
+            <button onclick="close_dialog(null, 'remove-dialog-wrapper')">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <\!-- ADD ENTRY DIALOG --\>
+    <div class="add-entry-dialog-wrapper dialog-wrapper" style="display: none;" onmousedown="close_dialog(event.target, 'add-entry-dialog-wrapper')">
+      <div class="add-entry-dialog dialog-dialog dialog active" style="max-width: 400px;">
+        <div class="title-bar">
+          <div class="title-bar-text">
+            Add Entry
+          </div>
+          <div class="title-bar-buttons">
+            <button data-close="" onclick="close_dialog(null, 'add-entry-dialog-wrapper')"></button>
+          </div>
+        </div>
+        <div class="dialog-body" style="text-align: center;">
+          <input type="text" value="" onkeydown="on_enter(event.which, () => {next_textbox('.add-entry-dialog .desc-input')})" placeholder="Entry SKU" class="sku-input" autofocus spellcheck="false">
+          <input type="text" value="" onkeydown="on_enter(event.which, () => {next_textbox('.add-entry-dialog .loc-input')})" placeholder="Entry Description" class="desc-input" spellcheck="false">
+          <input type="text" value="" onkeydown="on_enter(event.which, () => {add_entry()})" placeholder="Entry Location" class="loc-input" spellcheck="false">
+          <div class="padding">
+            <button onclick="add_entry()">Add Entry</button>
+            <button onclick="close_dialog(null, 'add-entry-dialog-wrapper')">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+
+
+    <script src="scanner.js"></script>
+    <script></script>
+
+    <script type="module" src="styles/win9x/modules/lists.js"></script>
+  </body>
+</html>
